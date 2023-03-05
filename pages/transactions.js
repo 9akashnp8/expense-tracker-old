@@ -27,6 +27,7 @@ export default function BasicTable({transactions}) {
                 </Typography>
                 <Button 
                     color="inherit"
+                    variant="outlined"
                     component={Link}
                     href='/transactions/add/'
                 >
