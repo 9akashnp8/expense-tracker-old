@@ -18,8 +18,8 @@ import { supabase } from '@/lib/supabaseClient';
 
 export default function BasicTable({transactions}) {
   return (
-    <Paper sx={{maxWidth: 650, margin: 'auto'}} >
-        <Box sx={{ flexGrow: 1 }}>
+    <Paper sx={{maxWidth: 650, margin: 'auto', my: { xs: 3, md: 6 } }} >
+        <Box sx={{ flexGrow: 1}}>
             <AppBar position="static">
                 <Toolbar>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
