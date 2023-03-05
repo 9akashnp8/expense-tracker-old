@@ -7,10 +7,7 @@ import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 
 import Link from 'next/link';
 
@@ -35,26 +32,22 @@ export default function BaseDrawer({children}) {
         <Toolbar />
         <Divider />
         <List>
-            <Link href={'/'}>
-                <ListItem key={1} disablePadding>
-                <ListItemButton>
-                    {/* <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                    </ListItemIcon> */}
-                    <ListItemText primary={'Home'} />
-                </ListItemButton>
-                </ListItem>
-            </Link>
-            <Link href={'/transactions'}>
-                <ListItem key={1} disablePadding>
-                <ListItemButton>
-                    {/* <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                    </ListItemIcon> */}
-                    <ListItemText primary={'Transactions'} />
-                </ListItemButton>
-                </ListItem>
-            </Link>
+          <ListItem key={1} disablePadding>
+          <ListItemButton component={Link} href='/'>
+              {/* <ListItemIcon>
+              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon> */}
+              <ListItemText primary={'Home'} />
+          </ListItemButton>
+          </ListItem>
+          <ListItem key={1} disablePadding>
+          <ListItemButton component={Link} href='/transactions/'>
+              {/* <ListItemIcon>
+              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon> */}
+              <ListItemText primary={'Transactions'} />
+          </ListItemButton>
+          </ListItem>
         </List>
       </Drawer>
       <Box

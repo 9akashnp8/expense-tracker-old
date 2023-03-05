@@ -11,8 +11,8 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+
+import Link from 'next/link';
 
 import { supabase } from '@/lib/supabaseClient';
 
@@ -25,7 +25,13 @@ export default function BasicTable({transactions}) {
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     Transactions
                 </Typography>
-                <Button color="inherit">Add New</Button>
+                <Button 
+                    color="inherit"
+                    component={Link}
+                    href='/transactions/add/'
+                >
+                    Add New
+                </Button>
                 </Toolbar>
             </AppBar>
         </Box>
